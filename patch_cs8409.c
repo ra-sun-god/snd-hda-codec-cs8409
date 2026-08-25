@@ -1489,9 +1489,10 @@ static int patch_cs8409(struct hda_codec *codec)
 
 
 static const struct hda_device_id snd_hda_id_cs8409[] = {
-	HDA_CODEC_ENTRY(0x10138409, "CS8409", patch_cs8409),
-	{} /* terminator */
+    { .vendor_id = 0x10138409, .rev_id = 0, .name = "CS8409", .driver_data = (unsigned long)patch_cs8409 },
+    {} /* terminator */
 };
+
 MODULE_DEVICE_TABLE(hdaudio, snd_hda_id_cs8409);
 
 static struct hda_codec_driver cs8409_driver = {

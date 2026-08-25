@@ -1763,8 +1763,9 @@ static void cs_8409_capture_pcm_hook(struct hda_pcm_stream *hinfo, struct hda_co
                 printk("snd_hda_intel: command cs_8409_capture_pcm_hook HOOK init  - CODEC NULL exit");
                 return;
         }
-        else
-                myprintk_dbg("snd_hda_intel: command cs_8409_capture_pcm_hook HOOK init  - CODEC NOT NULL");
+        else {
+			printk_dbg("snd_hda_intel: command cs_8409_capture_pcm_hook HOOK init  - CODEC NOT NULL");
+		}
 
         //dump_stack();
 
